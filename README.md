@@ -1,4 +1,4 @@
-# ProofPointEssentialsClient
+# ProofPoint Essentials Client for C#
 This is a C# wrapper for ProofPoint Essentials API v1
 
 Please note this is an incomplete project at the moment and it is currently under development.
