@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProofPointEssentialsCSharpClient
+namespace ProofPointEssentialsCSharpClient.Services.Users
 {
     interface IProofPointUserService
     {
@@ -45,5 +45,7 @@ namespace ProofPointEssentialsCSharpClient
         /// <param name="createUser"></param>
         /// <returns></returns>
         UserListOutputDto CreateUser(string Domain, List<ProofPointUserModal> createUser);
+
+        UserListOutputDto CreateUser(string Domain, ProofPointUserModal createUser);
     }
 }

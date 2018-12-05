@@ -33,6 +33,12 @@
     <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
     </Reference>
@@ -52,21 +58,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Consts\ProofPointEndpoints.cs" />
-    <Compile Include="IProofPointUserService.cs" />
+    <Compile Include="Models\Logger\LoggerModel.cs" />
+    <Compile Include="Services\Users\IProofPointUserService.cs" />
+    <Compile Include="ProofPointLogger\LoggerService.cs" />
     <Compile Include="Models\Users\Dto\UserOutputDto.cs" />
     <Compile Include="Models\Users\UpdateUserError.cs" />
-    <Compile Include="Models\Enums\ProofPointUserTypes.cs" />
     <Compile Include="Models\Users\Dto\UserListOutputDto.cs" />
     <Compile Include="Models\Users\ProofPointUserModal.cs" />
     <Compile Include="Models\Users\ProofPointUserBase.cs" />
     <Compile Include="Models\Users\User_Odin_Settings.cs" />
-    <Compile Include="ProofPointUserService.cs" />
+    <Compile Include="Services\Users\ProofPointUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\AppSettings.cs" />
+    <Compile Include="Utility\EncryptionHelper.cs" />
+    <Compile Include="Utility\RestSharpExtensions.cs" />
     <Compile Include="Utility\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
